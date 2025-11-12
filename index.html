@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picsell.co - Premium Domain for AI Image Marketplace</title>
+    <meta name="description" content="Picsell.co - The perfect domain for your AI-powered image marketplace. Professional, memorable, and ready to scale.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background: #ffffff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .domain-name {
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .tagline {
+            font-size: 26px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .features {
+            padding: 100px 20px;
+            background: #f8f9fa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .feature-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c2c2c;
+        }
+
+        .feature-description {
+            color: #6c757d;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c2c2c;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .value-prop {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .value-number {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .value-label {
+            font-size: 16px;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        .use-cases {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2d3561 0%, #1f2544 100%);
+            color: white;
+        }
+
+        .use-cases .section-title {
+            color: white;
+        }
+
+        .use-cases .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .use-case-list {
+            max-width: 800px;
+            margin: 60px auto 0;
+            display: grid;
+            gap: 25px;
+        }
+
+        .use-case-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px 35px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            backdrop-filter: blur(10px);
+        }
+
+        .use-case-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .use-case-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        .final-cta {
+            padding: 100px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .price-tag {
+            font-size: 28px;
+            color: #6c757d;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .secure-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .stats-bar {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            border-top: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .stats-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        footer {
+            background: #2c2c2c;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-text {
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .domain-name {
+                font-size: 48px;
+            }
+
+            .tagline {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .trust-indicators {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .trust-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            text-align: center;
+            opacity: 0.6;
+            font-size: 14px;
+            color: #6c757d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-icon {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<section class="hero">
+    <div class="container">
+        <h1 class="domain-name">Picsell.co</h1>
+        <p class="tagline">The Perfect Domain for AI-Powered Image Marketplaces</p>
+        <a href="https://dan.com/buy-domain/picsell.co" class="cta-button">Acquire This Domain →</a>
+    </div>
+</section>
+
+<section class="stats-bar">
+    <div class="stats-container">
+        <div class="stat-item">
+            <span class="stat-value">7 Letters</span>
+            <span class="stat-label">Short & Memorable</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">.co</span>
+            <span class="stat-label">Premium TLD</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Brandable</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">Global</span>
+            <span class="stat-label">Market Ready</span>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Picsell.co is Perfect for Your Business</h2>
+        <p class="section-subtitle">A premium domain that instantly communicates your value proposition in the rapidly growing AI image marketplace industry</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Instant Brand Recognition</h3>
+                <p class="feature-description">Combines "pics" (pictures) and "sell" into a clear, memorable brand that immediately conveys your business model. No explanation needed.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">SEO Advantage</h3>
+                <p class="feature-description">Keyword-rich domain with natural search terms. Perfect for organic discovery in the booming AI-generated content market.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💎</div>
+                <h3 class="feature-title">Premium .co Extension</h3>
+                <p class="feature-description">The .co TLD is trusted by global startups and tech companies. Professional, modern, and internationally recognized.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3 class="feature-title">Market-Ready</h3>
+                <p class="feature-description">Perfect timing as AI image generation explodes. Position yourself as the marketplace leader with a domain that matches your ambition.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3 class="feature-title">Global Appeal</h3>
+                <p class="feature-description">Easy to pronounce in any language. No cultural barriers, no confusing spellings. Built for international expansion.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Type-In Traffic</h3>
+                <p class="feature-description">Intuitive domain that users will naturally type when searching for AI image marketplaces. Direct navigation equals lower acquisition costs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="value-prop">
+    <div class="container">
+        <h2 class="section-title">Domain Value Proposition</h2>
+        <p class="section-subtitle">Strategic advantages that deliver immediate ROI for your AI image marketplace</p>
+
+        <div class="value-grid">
+            <div class="value-item">
+                <div class="value-number">2x</div>
+                <p class="value-label">Higher Brand Recall vs Generic Alternatives</p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-number">45%</div>
+                <p class="value-label">Lower Customer Acquisition Cost with Premium Domain</p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-number">10x</div>
+                <p class="value-label">Return Potential in AI Content Market Growth</p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-number">$0</div>
+                <p class="value-label">Rebranding Costs with the Right Domain from Day One</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="use-cases">
+    <div class="container">
+        <h2 class="section-title">Perfect For</h2>
+        <p class="section-subtitle">This premium domain is ideal for businesses building the future of visual content</p>
+
+        <div class="use-case-list">
+            <div class="use-case-item">
+                <h3 class="use-case-title">AI Image Marketplace</h3>
+                <p class="use-case-description">Build the leading platform for buying and selling AI-generated images. Position yourself as the trusted marketplace for creators and businesses.</p>
+            </div>
+
+            <div class="use-case-item">
+                <h3 class="use-case-title">Stock Photo Platform</h3>
+                <p class="use-case-description">Launch a modern alternative to traditional stock photo sites. Perfect for next-generation visual content licensing.</p>
+            </div>
+
+            <div class="use-case-item">
+                <h3 class="use-case-title">Creative Asset Marketplace</h3>
+                <p class="use-case-description">Expand beyond photos to videos, graphics, and digital art. The domain scales with your vision.</p>
+            </div>
+
+            <div class="use-case-item">
+                <h3 class="use-case-title">Enterprise Visual Content Solution</h3>
+                <p class="use-case-description">Serve Fortune 500 companies seeking licensed, AI-generated visuals at scale. Enterprise-grade branding from day one.</p>
+            </div>
+
+            <div class="use-case-item">
+                <h3 class="use-case-title">NFT & Digital Art Platform</h3>
+                <p class="use-case-description">Perfect foundation for blockchain-based visual content sales. Modern, tech-forward positioning.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trust-indicators">
+    <div class="container">
+        <h2 class="section-title">Secure Acquisition Process</h2>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <span class="trust-icon">🔒</span>
+                <span>Escrow Protection</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">✓</span>
+                <span>Verified Seller</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">⚡</span>
+                <span>Fast Transfer</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">💼</span>
+                <span>Business-Ready</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="final-cta">
+    <div class="container">
+        <h2 class="section-title">Own the Future of Visual Content</h2>
+        <p class="section-subtitle">Don't let your competition secure this premium domain. The AI image market is exploding—position your brand as the industry leader.</p>
+        <div class="price-tag">Premium Domain • Professional Opportunity</div>
+        <a href="https://dan.com/buy-domain/picsell.co" class="cta-button">Make an Offer on Dan.com →</a>
+        <div class="secure-badge">
+            <span>🔒</span>
+            <span>Secure transaction via Dan.com • Trusted by thousands of domain buyers worldwide</span>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p class="footer-text">Picsell.co • Premium Domain Available for Purchase</p>
+        <p class="footer-text" style="margin-top: 10px; font-size: 12px;">Contact: galiyev@gmail.com • +7 701 221 67 98</p>
+    </div>
+</footer>
+</body>
+</html>
